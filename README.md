@@ -34,7 +34,7 @@ You will learn:
 * Why you need to be more explicit when using interfaces  
 
 Resources:  
-* Slides: [/T23-catching-up-with-csharp-interfaces/SLIDES-CSharp-Interfaces.pdf](./T23-catching-up-with-csharp-interfaces/SLIDES-CSharp-Interfaces.pdf)
-* Sample Code: [/T23-catching-up-with-csharp-interfaces/SampleCode/](./T23-catching-up-with-csharp-interfaces/SampleCode/)
+* Slides: [/T12-catching-up-with-csharp-interfaces/SLIDES-CSharp-Interfaces.pdf](./T12-catching-up-with-csharp-interfaces/SLIDES-CSharp-Interfaces.pdf)
+* Sample Code: [/T12-catching-up-with-csharp-interfaces/SampleCode/](./T12-catching-up-with-csharp-interfaces/SampleCode/)
 
 ---
