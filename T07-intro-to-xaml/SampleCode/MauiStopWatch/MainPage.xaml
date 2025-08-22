@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiStopWatch.MainPage">
+
+    <Grid x:Name="LayoutGrid" BackgroundColor="#FF333333">
+        <Grid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="28"/>
+                <Setter Property="Margin" Value="6"/>
+                <Setter Property="Padding" Value="10, 3"/>
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Output Display -->
+        <Label Grid.Row="0"
+               Text="{Binding DisplayInterval}" 
+               Style="{StaticResource Headline}"
+               TextColor="White"
+               FontSize="64"/>
+
+        <HorizontalStackLayout Grid.Row="1"
+                               HorizontalOptions="Center"
+                               Padding="5">
+            <Button x:Name="StartButton"
+                    Clicked="StartButton_Click">
+                <Button.Text>Start</Button.Text>
+            </Button>
+            <Button x:Name="StopButton"
+                    Clicked="StopButton_Click">
+                <Button.Text>Stop</Button.Text>
+            </Button>
+            <Button x:Name="ClearButton"
+                    Clicked="ClearButton_Click">
+                <Button.Text>Clear</Button.Text>
+            </Button>
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>

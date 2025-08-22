@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application
+    x:Class="WinUIStopWatch.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WinUIStopWatch">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+                <!-- Other merged dictionaries here -->
+            </ResourceDictionary.MergedDictionaries>
+            <!-- Other app resources here -->
+            <!-- AppButton Control Template -->
+            <ControlTemplate TargetType="Button" x:Key="AppButton">
+                <Grid>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <Storyboard>
+                                    <ColorAnimation Duration="0:0:0"
+                                                Storyboard.TargetName="ButtonBackgroundBrush"
+                                                Storyboard.TargetProperty="Color" To="{TemplateBinding Background}"/>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="MouseOver">
+                                <Storyboard>
+                                    <ColorAnimation Duration="0:0:0"
+                                                Storyboard.TargetName="ButtonBackgroundBrush"
+                                                Storyboard.TargetProperty="Color" To="DarkSlateGray"/>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="Pressed">
+                                <Storyboard>
+                                    <ColorAnimation Duration="0:0:0"
+                                                Storyboard.TargetName="ButtonBackgroundBrush"
+                                                Storyboard.TargetProperty="Color" To="LightSlateGray"/>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="Disabled">
+                                <Storyboard>
+                                    <DoubleAnimation Duration="0:0:0"
+                                                Storyboard.TargetName="border"
+                                                Storyboard.TargetProperty="Opacity" To="0.3"/>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    <Border x:Name="border" BorderBrush="{TemplateBinding Foreground}"
+                        BorderThickness="1"
+                        Padding="10, 3">
+                        <Border.Background>
+                            <SolidColorBrush x:Name="ButtonBackgroundBrush" 
+                                         Color="{TemplateBinding Background}" />
+                        </Border.Background>
+                        <ContentPresenter HorizontalAlignment="Center" />
+                    </Border>
+                </Grid>
+            </ControlTemplate>
+        
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
