@@ -23,7 +23,7 @@
                                                 Storyboard.TargetProperty="Color" To="{TemplateBinding Background}"/>
                                 </Storyboard>
                             </VisualState>
-                            <VisualState x:Name="MouseOver">
+                            <VisualState x:Name="PointerOver">
                                 <Storyboard>
                                     <ColorAnimation Duration="0:0:0"
                                                 Storyboard.TargetName="ButtonBackgroundBrush"
